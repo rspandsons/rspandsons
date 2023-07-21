@@ -1,0 +1,418 @@
+body{
+    margin: 0;
+    background: url("../content/bgimage.png") center;
+}
+
+
+
+/*Nav Bar*/
+
+.top-nav{
+    font-family: "Jost", sans-serif;
+    overflow: hidden;
+    background-color: white;
+    max-width: 100%;
+    padding-top: 1%;
+
+}
+
+.nav-items{
+    max-width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.top-nav .icon {
+    display: none;
+}
+
+.contact-us{
+    background-color: #382F87;
+    border-radius: 5px;
+    color: white !important;
+}
+
+.top-nav a{
+    float: left;
+    text-align: center;
+    color: black;
+    display: block;
+    padding: 14px 36px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.top-nav-active{
+    color: #382F87 !important;
+    font-size: 20px !important;
+    -webkit-text-stroke-width: 1px;
+}
+
+@media (max-width: 767px) {
+    .top-nav a{
+        display: none;
+    }
+
+    .top-nav a.icon{
+        top: 1%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .top-nav a:not(:first-child) {display: none;}
+    .top-nav a.icon {
+        position: absolute;
+        display: block;
+        right: 0;
+    }
+    .nav-items {
+        flex-direction: column; /* Change the direction to column for the responsive menu */
+        align-items: center; /* Center the navigation items vertically */
+        justify-content: center; /* Center the navigation items horizontally */
+        width: 100%; /* Set the width to 100% to take up the full width of the screen */
+    }
+
+
+
+}
+
+@media screen and (max-width: 1000px) {
+    .top-nav.responsive {position: relative;}
+    .top-nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .top-nav.responsive a {
+        float: none;
+        display: flex;
+        justify-content: center;
+        text-align: left;
+    }
+
+}
+
+.logo{
+    width: 5%;
+    position: absolute;
+    top: 2vh;
+    left: 1vh;
+}
+
+@media screen and (max-width: 1100px) {
+    .logo{
+        min-width: 8%;
+    }
+
+    .cs1{
+        content: url("../content/carousel1V.jpg");
+    }
+
+    .cs2{
+        content: url("../content/carousel3V.jpg");
+    }
+
+    .cs3{
+        content: url("../content/carousel3V.jpg");
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo{
+        min-width: 18%;
+    }
+
+
+
+    h2{
+        font-size: 2vw;
+    }
+
+    h1{
+        font-size: 3vw;
+    }
+
+    h4{
+        font-size: 1.5vw;
+    }
+}
+
+
+
+
+/*Header*/
+/*Top Image*/
+.parentfortype {
+    position: relative;
+    max-width: 100%;
+    height: 300px; /* set a height to the parent div */
+    /*border: 1px solid black; !* just to visualize the div *!*/
+    background: url("../content/services/bgimg.png") no-repeat center;
+}
+
+.childfortype {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center; /* center the content of the child div */
+    width: 200px; /* set a width to the child div */
+    height: 50px; /* set a height to the child div */
+    background-color: white; /* just to visualize the div */
+    color: #382F87; /* set a color to the text inside the div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+
+
+
+/* Desktop styles */
+.para-content-container {
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: Poppins, sans-serif;
+    text-align: justify;
+}
+
+.para-header {
+    text-align: center;
+    border-bottom: 5px solid #EDEBFF;
+    color: #382F87;
+    max-width: 100%;
+}
+
+.select-us-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    max-width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background: #EDEBFF;
+    border-radius: 35px;
+    padding-bottom: 2%;
+}
+
+.git img {
+    height: 40px;
+    width: 40px;
+}
+
+.git td:first-child {
+    padding-right: 10px;
+}
+
+.git td {
+    max-width: 100%;
+}
+
+
+.select-us-card tr td {
+    max-width: 100%;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    .select-us-card {
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 20px;
+    }
+
+    .select-us-card tr td:first-child {
+        padding-right: 5px;
+    }
+
+    .git td {
+        font-size: 14px;
+    }
+
+    .git img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+
+/*Google Map*/
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Center the map horizontally */
+.map-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*Footer*/
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #2f2f2f;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    font-family: "Jost", sans-serif;
+}
+
+.footer > * {
+    flex:  1 100%;
+}
+
+.footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+    padding-left: 15%;
+}
+
+.footer__logo {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    /*text-transform: lowercase;*/
+    font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.nav__title {
+    /*font-weight: 400;*/
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer address {
+    font-style: normal;
+    color: #999;
+}
+
+.footer__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2f2f2f;
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0 1.3em;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer li {
+    line-height: 2em;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer__nav {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+.nav__ul a {
+    color: #999;
+}
+
+.nav__ul--extra {
+    column-count: 2;
+    column-gap: 1.25em;
+}
+
+.legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+}
+
+.legal__links {
+    display: flex;
+    align-items: center;
+}
+
+.heart {
+    color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+        flex: 1;
+    }
+
+    .nav__item--extra {
+        /*flex-grow: 2;*/
+    }
+
+    .footer__addr {
+        flex: 1 0px;
+    }
+
+    .footer__nav {
+        flex: 2 0px;
+    }
+}
