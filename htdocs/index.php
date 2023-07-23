@@ -1,1 +1,0 @@
-<script>window.location.href = "https://rspandsons.com/Home/"</script>
